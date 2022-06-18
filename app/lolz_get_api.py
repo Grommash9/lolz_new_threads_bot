@@ -8,7 +8,7 @@ def get_updates():
         url = f"https://api.lolz.guru/threads?forum_id={forums}"
 
         headers = {
-            'Authorization': 'Bearer 5702b78b190e5eb2fac31a5eaa53706bee98db81'
+            'Authorization': f'Bearer {config.access_token}'
         }
 
         response = requests.request("GET", url, headers=headers)
