@@ -12,7 +12,6 @@ def get_updates():
         }
 
         response = requests.request("GET", url, headers=headers)
-
         json_response = response.json()
 
         for threads in json_response['threads']:
@@ -24,4 +23,4 @@ def get_updates():
                              f"{threads['first_post']['post_body_plain_text'][:3800]}\n\n"
                              f"{threads['links']['permalink']}")
                 time.sleep(1)
-        time.sleep(1)
+        time.sleep(5)

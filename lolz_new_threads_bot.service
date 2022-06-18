@@ -1,0 +1,15 @@
+[Unit]
+Description=lolz parser
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/lolz_new_threads_bot/
+ExecStart=/usr/bin/python3 -m app
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
